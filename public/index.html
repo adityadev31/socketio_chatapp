@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <script defer src="/socket.io/socket.io.js"></script>
+   <script defer src="js/client.js"></script>
+   <title>AD's Chat App</title>
+</head>
+<body>
+   
+   <!--========== H E A D ============-->
+   <div class="nav">
+      <div class="inner-nav">
+         <img src="img/img.png" alt="chat image">
+         <h3>Let's Chat</h3>
+      </div>
+   </div>
+
+   <!--========= C H A T   B O X ========-->
+   <div class="chatBox">
+      <!-- <div class="bubble left">Hi! this is rahul</div>
+      <div class="bubble right">Hi! this is kunal</div>
+      <div class="bubble-img left"><img src="img/sticker-1.png"></div> -->
+   </div>
+
+   <!-- ============ F O R M ========== -->
+   <form class="form">
+      <input type="text" id="inputbox" name="inputbox" placeholder="Enter message ...">
+      <button type="submit">Send</button>
+   </form>
+
+   <!-- =============== S T I C K E R S ============= -->
+
+   <div class="sticker-list">
+      <img id="s1" src="img/sticker-1.png" alt="sticker1" onclick="appendSticker(1)">
+      <img id="s2" src="img/sticker-2.png" alt="sticker1" onclick="appendSticker(2)">
+      <img id="s3" src="img/sticker-3.png" alt="sticker1" onclick="appendSticker(3)">
+      <img id="s4" src="img/sticker-4.png" alt="sticker1" onclick="appendSticker(4)">
+      <img id="s5" src="img/sticker-5.png" alt="sticker1" onclick="appendSticker(5)">
+      <img id="s6" src="img/sticker-6.png" alt="sticker1" onclick="appendSticker(6)">
+      <img id="s7" src="img/sticker-7.png" alt="sticker1" onclick="appendSticker(7)">
+      <img id="s8" src="img/sticker-8.png" alt="sticker1" onclick="appendSticker(8)">
+      <img id="s9" src="img/sticker-9.png" alt="sticker1" onclick="appendSticker(9)">
+      <img id="s10" src="img/sticker-10.png" alt="sticker1" onclick="appendSticker(10)">
+      <img id="s11" src="img/sticker-11.png" alt="sticker1" onclick="appendSticker(11)">
+   </div>
+
+   
+</body>
+</html>

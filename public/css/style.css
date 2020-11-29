@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   width: 100vw;
+   height: 100vh;
+   font-family: 'Poppins', sans-serif;
+   overflow-x: hidden;
+   overflow-y: hidden;
+   position: relative;
+}
+
+
+.nav{
+   width: 100vw;
+   height: 120px;
+   margin-bottom: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.inner-nav{
+   width: 350px;
+   height: 90%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.inner-nav img{
+   width: 100px;
+}
+.inner-nav h3{
+   font-size: 3rem;
+   margin-left: 10px;
+   font-family: 'Paytone One', sans-serif;
+}
+
+.chatBox{
+   width: 70vw;
+   height: 70vh;
+   max-width: 900px;
+   margin: 0 auto;
+   background-color: red;
+   border-radius: 2rem;
+   padding: 30px 30px;
+   position: relative;
+   overflow-y: scroll;
+   overflow-x: hidden;
+}
+
+.bubble{
+   background-color: rgb(243, 243, 243);
+   max-width: 310px;
+   padding: 1rem 1.5rem;
+   margin-bottom: 10px;
+   box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.19);
+}
+
+.bubble-img{
+   background-color: #fff;
+   max-width: 310px;
+   padding: 1rem 1.5rem;
+   margin-bottom: 10px;
+   box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.19);
+}
+
+.bubble-img img{
+   width: 80%;
+}
+
+.left{
+   float: left;
+   clear: both;
+   border-radius: 0rem 2rem 2rem 2rem;
+}
+
+.right{
+   float: right;
+   clear: both;
+   border-radius: 2rem 0rem 2rem 2rem;
+}
+
+.center{
+   float: none;
+   clear: both;
+   background-color: #fff;
+   margin: 20px auto;
+   border-radius: 10px;
+   padding: 2px 5px;
+   text-align: center;
+   max-width: 150px;
+   box-shadow: none;
+   font-size: 10px;
+}
+
+form{
+   position: absolute;
+   bottom: 15px;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 65vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+form input{
+   width: 80%;
+   height: 40px;
+   border-radius: 2rem 0 0 2rem;
+   outline: none;
+   border: 1px solid #ccc;
+   padding: 0 1rem;
+}
+
+form button{
+   padding: .75rem 1.5rem;
+   border-radius: 0 2rem 2rem 0;
+   border: none;
+   cursor: pointer;
+}
+
+
+.sticker-list{
+   position: absolute;
+   left: 8vw;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: 10vw;
+   max-height: 70vh;
+   overflow-y: scroll;
+}
+
+.sticker-list img{
+   width: 80%;
+   margin: 10px auto;
+}
+

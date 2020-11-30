@@ -43,8 +43,22 @@ form.addEventListener('submit', (e) => {
 })
 
 
+
+
+// entry point -> asking for user's name
 const username = prompt("Enter your name to join");
 socket.emit("new-user-joined", username);
+
+
+
+
+// showing updated list to the current client
+socket.on('updated-list-of-names', userNames => {
+   userNames.pop();
+   for(let j=0; j<userNames.length; j++){
+      append(`${userNames[j]} in the room`, 'center');
+   }
+})
 
 // adding new user joined to chatbox
 socket.on('user-joined', name => {

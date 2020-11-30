@@ -17,6 +17,10 @@ server.listen(PORT, () => console.log(`server is running on PORT ${PORT}`))
 
 
 const users = [];
+const userNames = [];
+
+
+
 
 io.on('connection', socket =>{
 
@@ -24,6 +28,8 @@ io.on('connection', socket =>{
    socket.on("new-user-joined", (name) =>{
       console.log("new user", name);
       users[socket.id] = name;
+      userNames.push(name);
+      socket.emit('updated-list-of-names', userNames);
       socket.broadcast.emit('user-joined', name);
    });
 
@@ -39,8 +45,12 @@ io.on('connection', socket =>{
 
    // when user disconnect from socket server
    socket.on('disconnect', message => {
-      socket.broadcast.emit('left', users[socket.id])
-      console.log(`${users[socket.id]} left`)
+      socket.broadcast.emit('left', users[socket.id]);
+      console.log(`${users[socket.id]} left`);
+      var index = userNames.indexOf(users[socket.id]);
+      if (index > -1) {
+         userNames.splice(index, 1);
+      }
    })
 
 });
